@@ -7,9 +7,9 @@
 - `m` (multiline) affects anchors behaviour `^` and `$` (start and end of a string) making regex to apply to multiple lines
 - `s` (single-line) treats text as one-line string
 
-## metacharacters
+## Metacharacters
 
-### character classes matches specific set of characters
+### Character classes matches specific set of characters
 
 - `\d` - numeric 
 - `\w` - word (alphanumeric + underscore)
@@ -22,17 +22,17 @@
 
 - `^` (all but) example: all but vowes: `[^aeiouAEIOU\s]`
 
-### ranges
+### Ranges
 - `[0-9]` -- matches character from 0 to 9
 - `[a-z]`-- matches lowercase chars from a to z
 
-## Quantifiers
+### Quantifiers
 - Asterix `*` match one or more occurencies
 - Plus `+` matches one or more occurencies of preceding chard
 - Curly braces `{}` specifies how many times match should occur
 
 ### Lazy quantifiers 
-- adding `?` after them make it lazy (search first )
+- adding `?` after them make it lazy (search min match)
 
 ### Repetition without quantifier
 - Parenthesis `()` groups and capture subpatterns
