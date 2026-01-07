@@ -8,4 +8,9 @@ func main() {
 	charClassesExample()
 	NegatedCharSet()
 	RangesExample()
+	AsterixExample()
+	PlusExample()
+	CurlyExample()
+	LazyQuantifiers()
+	Repetition()
 }

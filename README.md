@@ -24,4 +24,19 @@
 
 ### ranges
 - `[0-9]` -- matches character from 0 to 9
-- `[a-z]`
+- `[a-z]`-- matches lowercase chars from a to z
+
+## Quantifiers
+- Asterix `*` match one or more occurencies
+- Plus `+` matches one or more occurencies of preceding chard
+- Curly braces `{}` specifies how many times match should occur
+
+### Lazy quantifiers 
+- adding `?` after them make it lazy (search first )
+
+### Repetition without quantifier
+- Parenthesis `()` groups and capture subpatterns
+- dot `.` is a placeholder that matches every char
+- Pipe `|` match either of patterns 
+
+### Escaping
