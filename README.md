@@ -40,3 +40,6 @@
 - Pipe `|` match either of patterns 
 
 ### Escaping
+
+## Source 
+* [Mastering regular expressions in Go](https://www.honeybadger.io/blog/a-definitive-guide-to-regular-expressions-in-go/)
