@@ -13,4 +13,11 @@ func main() {
 	CurlyExample()
 	LazyQuantifiers()
 	Repetition()
+	Escape()
+	Anchors()
+	WordBoundaries()
+	Grouping()
+	MatchingUnicode()
+
+	ValidateEmail()
 }

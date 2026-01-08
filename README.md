@@ -28,7 +28,7 @@
 
 ### Quantifiers
 - Asterix `*` match one or more occurencies
-- Plus `+` matches one or more occurencies of preceding chard
+- Plus `+` matches one or more occurencies of preceding char
 - Curly braces `{}` specifies how many times match should occur
 
 ### Lazy quantifiers 
@@ -40,6 +40,23 @@
 - Pipe `|` match either of patterns 
 
 ### Escaping
+- `\` to escape special characters
+
+### Anchors (specify position of a match)
+- `^` and `$` anchors match start and end of string
+
+### Word Boundaries used to match positions between word chars and non-word chars
+- `\b`
+
+### Grouping creates sub-pattern
+- using `()`
+
+### Match unicode
+- `\p` - matches any unicode char
+- `\p{Han}` - for chinese language
+
+## Tasks & Use cases 
+- [form validation](./form_validation.go)
 
 ## Source 
 * [Mastering regular expressions in Go](https://www.honeybadger.io/blog/a-definitive-guide-to-regular-expressions-in-go/)

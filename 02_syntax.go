@@ -133,3 +133,47 @@ func Repetition() {
 	fmt.Println(pattern.MatchString("bird")) // false
 
 }
+
+func Escape() {
+	re := regexp.MustCompile(`\d+\.\d+`)
+	fmt.Println(re.MatchString("99.9"))  // true
+	fmt.Println(re.MatchString("9999.")) // false
+}
+
+func Anchors() {
+	re := regexp.MustCompile("^start.*end$")
+	fmt.Println(re.MatchString("start at the end"))    // true
+	fmt.Println(re.MatchString("start at the bottom")) // false
+}
+
+func WordBoundaries() {
+	// start
+	pattern := regexp.MustCompile(`(?i)\bbet`)
+	fmt.Println(pattern.FindAllString("Betty's better bet was to buy the blue blouse.", -1)) // [Bet bet, bet]
+
+	// end
+	re := regexp.MustCompile(`(?i)sion\b`)
+	fmt.Println(re.FindAllString("After much discussion, the team came to a consensus on the vision for the project.", -1)) // [sion sion]
+
+	// entire word
+	re = regexp.MustCompile(`(?i)\bcat\b`)
+	fmt.Println(re.FindAllString("Cat and dog and dogs and cats", -1)) // [Cat]
+
+}
+
+func Grouping() {
+	pattern := regexp.MustCompile(`(quick|lazy) (brown|gray) (fox|dog)`)
+	text := "The lazy gray dog jumps over the lazy fox"
+	fmt.Println(pattern.FindAllString(text, -1)) // returns [lazy gray dog]
+
+	// rearrange day and month
+	pattern = regexp.MustCompile(`(\d{2})-(\d{2})-(\d{4})`)
+	fmt.Println(pattern.ReplaceAllString("12-31-2025", "$2-$1-$3"))
+}
+
+func MatchingUnicode() {
+	text := "Hello world! 世界你好！"
+
+	re := regexp.MustCompile(`\p{Han}`)
+	fmt.Println(re.FindAllString(text, -1))
+}
