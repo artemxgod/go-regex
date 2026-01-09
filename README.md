@@ -57,6 +57,7 @@
 
 ## Tasks & Use cases 
 - [form validation](./form_validation.go)
+- [phone number validation](./num_validation.go)
 
 ## Source 
 * [Mastering regular expressions in Go](https://www.honeybadger.io/blog/a-definitive-guide-to-regular-expressions-in-go/)

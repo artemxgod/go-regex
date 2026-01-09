@@ -13,7 +13,7 @@ func ValidateEmail() {
 }
 
 func validate(email string) {
-	pattern := `^[a-zA-z0-9._+-]+@[a-zA-z0-9]+\.[a-zA-z]{2,5}$`
+	pattern := `^[a-zA-Z0-9._+-]+@[a-zA-Z0-9]+\.[a-zA-Z.]{2,5}$`
 	emailPattern := regexp.MustCompile(pattern)
 
 	if emailPattern.MatchString(email) {
@@ -22,3 +22,5 @@ func validate(email string) {
 		fmt.Println("Invalid email address")
 	}
 }
+
+// abc012@email1.me
